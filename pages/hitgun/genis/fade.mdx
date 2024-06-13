@@ -6,3 +6,71 @@ Fade özelliği, videolarınızın başına ve sonuna solma efekti eklemenizi sa
 
 Video sonu için 3 saniye ayarı yapıldığında ise videonun bitimine 3 saniye kala görüntü yavaş yavaş kararmaya başlar.
 
+## Fade Ayarları
+
+Fade ayarları " - " sembolü ile yapılır.
+
+En az 2 adet değer girilmesi gerekmektedir.
+
+0 değeri, işlem gerçekleşmemesini sağlar.
+
+Örneğin yalnızca video başlangıcı için 4 saniyelik bir fade ayarı yapmak istiyorsanız;
+
+4-0
+
+değeri girilmelidir.
+
+Sadece video sonuna 3 saniyelik bir fade ayarı eklenmek isteniyorse;
+
+0-3
+
+değeri girilmelidir.
+
+Hem video başı hem sonuna fade ayarı yapılmak isteniyorsa;
+
+4-3
+
+gibi arzu ettiğiniz değerleri girebilirsiniz.
+
+
+
+### Intro/Outro Fade
+
+Intro ve Outro için de fade ayarları uygulanabilir. 
+
+#### Intro Fade
+
+
+Sadece Intro için fade ayarı yapmak istediğinizde, intronuzun bitiş anına fade ayarı uygulanır.
+
+Örneğin 3 saniyelik bir fade ayarı yapmak istiyorsanız;
+
+4-3-3
+
+değeri girmeniz yeterlidir. Yani en sondaki değer, intro fade değerinizi belirler.
+
+
+
+#### Outro Fade
+
+
+Outro'nuz için fade ayarı uyguladığınızda, outro'nun başlangıcına fade ayarı yapılır.
+
+4-3-3-4
+
+şeklinde bir ayar yaptığınızda en sonda yer alan 4 ifadesi, outronuzun ilk 4 saniyesine fade özelliği uygulanmasını sağlar.
+
+
+Fade özelliği uygulamak istemediğiniz anlara 0 değeri eklemelisiniz.
+
+Örneğin yalnızca Outro için fade ayarı yapmak istiyorsanız;
+
+
+0-0-0-4
+
+şeklinde bir değer girmelisiniz.
+
+
+3-2-0-2
+
+şeklinde girilen bir değerde ise videonuzun başlangıcına ve bitişine fade ayarı uygulanırken intro'ya uygulanmaz. Ardından Outro için 2 saniyelik fade ayarı uygulanır.

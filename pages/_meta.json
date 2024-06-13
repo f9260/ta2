@@ -5,17 +5,40 @@
   "multi":"Multi",
   "single":"Single",
   "ortak":"Ortak",
-  "testtt":"testtt1",
+  "egitimler":"Eğitimler",
+  "sinirlamalar":"Sınırlamalar",
+  "ve3plus-helper":"VE3.Plus-Helper",
  
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
+ 
+  "ve3plus": {
+    "title": "VE3.Plus",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://ve3.plus/tr"
+  },
+ 
+  "forum": {
+    "title": "Forum ↗",
+    "type": "page",
+    "href": "https://forum.ve3.plus/",
     "newWindow": true
+  },
+  "destek": {
+    "title": "Geribildirim ↗",
+    "type": "page",
+    "href": "https://forum.ve3.plus/t/feedback?language=tr",
+    "newWindow": true
+  },
+  "demo": {
+    "title": "Demo ↗",
+    "type": "page",
+    "href": "https://forum.ve3.plus/d/5-demo-talebi",
+    "newWindow": true
+  },
+  "en": {
+    "title": "EN",
+    "type": "page",
+    "href": "https://ve3.plus/guide",
+    "newWindow": false
   }
   
 }

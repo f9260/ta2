@@ -2,6 +2,12 @@
 
 Videolarınıza görsel ekleyebileceğiniz seçenektir.
 
+<video autoPlay muted loop controls>
+  <source src="/gorselekle.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+
 
 ## Görseller
 
@@ -15,10 +21,6 @@ Kaç görsel kullanmak istediğinizi Görsel Sayısı kısmından ayarlayabilris
 
 
 
-<video autoPlay muted loop controls>
-  <source src="/gorselekle.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
 
 
 
@@ -36,11 +38,7 @@ Eklediğiniz görsel sayısına göre her görselin ayarını " **::** " ifadesi
 
 Ardından Görsel Sayısı'nı 4 olarak belirledik.
 
-** -- buralara step falan yapılabilir -- **
-
 Görsellerimizin çözünürlüklerini ve hangi konumlarda yer almasını arzu ediyorsak konum bilgilerini girmemiz gerekir.
-
--- görsellerle ifade edilecek --
 
 Örnek çözünürlükler ve konumlar oluşturalım.
 
@@ -56,7 +54,7 @@ import { Callout } from 'nextra/components'
 Bu ayarlar neticesinde 4 adet görsel, arzu ettiğimiz çözünürlüklerde ve konumlarda içeriğe entegre edilecektir.
 
 
-## Opacity Ayarları
+## Opaklık Ayarları
 
 Görsellerinize şeffaflık ayarı vermek için bu seçeneği kullanabilirsiniz.
 
@@ -70,7 +68,7 @@ Birden fazla görsel kullanıldığı durumlarda her görsel için " :: " parame
 
 Üç adet görsel kullandınız ve üçü için de şeffaflık ayarı vermek istiyorsunuz.
 
-Bu durumda Opacity Ayarları bölümüne örneğin **5** değeri yazılırsa, bu değer **tüm görseller için** uygulanır.
+Bu durumda Opaklık Ayarları bölümüne örneğin **5** değeri yazılırsa, bu değer **tüm görseller için** uygulanır.
 
 Ancak **her biri için ayrı değerler** tanımlanmak isteniyorsa **5**::**2**::**7** şeklinde her görsel için ayrı değerler tanımlanabilir.
 

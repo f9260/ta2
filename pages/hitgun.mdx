@@ -2,7 +2,8 @@ import Image from 'next/image'
 import factory from 'images/factory.png'
 import render from 'images/render.png'
 import wide from 'images/wide.png'
-import viral from 'images/viral.png'
+import subtitles from 'images/subtitles.png'
+import hitgunviral from 'images/hitgunviral.png'
 import { Card, Cards } from 'nextra-theme-docs'
 
 # Mod: Hit Gun
@@ -17,7 +18,7 @@ Hit Gun, VE3.Plus sisteminin en gelişmiş yapısıdır.
 
 Yatay videolardan dikeylere her türlü içerik türünün üretilmesini sağlar.
 
-**Fabrika**, **Viral**, **Geniş** ve **Render** adında dört temel özelliği bulunur.
+**Fabrika**, **Viral**, **Geniş**, **Render** ve **Altyazı** adında beş temel özelliği bulunur.
 
 Bu özelliklerin tümü kendi içlerinde benzersiz alt özelliklere sahiptir.
 
@@ -27,15 +28,15 @@ Bu özelliklerin tümü kendi içlerinde benzersiz alt özelliklere sahiptir.
                         <Image src={factory} />
               </Card>
 
-               <Card title="Viral" image href="/hitgun/render">
-                     <Image src={viral} />
+               <Card title="Viral" image href="/hitgun/viral">
+                     <Image src={hitgunviral} />
 
               </Card>
 
             </Cards>
 
 
-  <Cards  num={2}>
+  <Cards>
 
               <Card title="Geniş" image href="/hitgun/genis">
                         <Image src={wide} />
@@ -45,7 +46,12 @@ Bu özelliklerin tümü kendi içlerinde benzersiz alt özelliklere sahiptir.
                         <Image src={render} />
               </Card>
 
-            </Cards>
+           
+                 <Card title="Altyazı" image href="/hitgun/altyazi">
+                        <Image src={subtitles} />
+              </Card>
+
+    </Cards>
 
 
 

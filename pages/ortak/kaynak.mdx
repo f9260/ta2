@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import kaynak from 'app-images/kaynak.jpg'
+import proxy from 'app-images/proxy.jpg'
+import proxy2 from 'app-images/proxy2.jpg'
+import proxy3 from 'app-images/proxy3.jpg'
 
 # Kaynak
 
@@ -55,4 +58,74 @@ URL List kapalıysa URL'ye göre işlem yürütülür. Eğer URL'de herhangi bir
 
 </Callout>
 
+
+
+## Proxy
+
+<Image src={proxy} />
+
+URL özelliğini Proxy ile kullanmak isterseniz Proxy seçeneğini aktif edebilirsiniz.
+
+
+### Proxy Listesi
+
+
+Proxy özelliğini kullanmak için proxylerinizin yer aldığı bir not defteri **Proxy Listesi** seçeneğinden sisteme tanımlanmalıdır.
+
+
+### Sabit Proxy Adı
+
+Kullanıcı adı ve şifre ile bağlanılan bir Proxy'e sahipseniz ve tüm proxylerinizde aynı kullanıcı ve şifre tanımlıysa, bu alana kullanıcı adınızı girebilirsiniz.
+
+
+### Sabit Proxy Şifresi
+
+Tüm proxylerinizde aynı şifre yer alıyorsa şifreyi bu alana girebilirsiniz.
+
+
+
+### Proxy Kuralları
+
+
+- Proxy türü **Http** olmak zorundadır. Https veya Socks5 proxyler desteklenmemektedir.
+
+- Kullanıcı ve şifreleri farklı olan çok sayıda proxy'e sahipseniz, not defterinde bu bilgileri
+
+`IP`:`Port`:`Username`:`Password`
+
+şeklinde girmelisiniz.
+
+Aynı kullanıcı ve şifrelere sahipseniz not defterinde sadece
+
+`IP`:`Port`
+
+girişi yapabilirsiniz. Kullanıcı adı ve şifrenizi ise **Sabit Kullanıcı Adı** ile **Sabit Proxy Şifresi** alanlarına girebilirsiniz.
+
+Herhangi bir kullanıcı adı ve şifreniz yoksa yalnızca
+
+`IP`:`Port`
+
+tanımlaması yeterlidir.
+
+
+- Proxyler not defterinde alt alta yer almalıdır.
+
+Örneğin :
+
+<Image src={proxy2} />
+
+
+- Mevcut proxyler rastgele biçimde kullanılır. Her çalışma için listeden rastgele bir proxy seçilir. 
+
+- Proxy kullanımı için en az 10 adet çalışır durumda olan http proxy türü eklemeniz önerilir.
+
+
+### Nereden Http Proxy Satın Alabilirim?
+
+[Webshare.io](https://www.webshare.io/?referral_code=ez4c6cj8l39n) adresinden satın alabilirsiniz.
+
+
+<a href="https://www.webshare.io/?referral_code=ez4c6cj8l39n" target="_blank">
+  <Image src={proxy3} width={600} height={600} />
+</a>
 

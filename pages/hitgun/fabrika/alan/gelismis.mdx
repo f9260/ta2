@@ -1,10 +1,18 @@
+import Image from 'next/image'
+import alan from 'images/alan.png'
+import alan2 from 'images/alan2.png'
+import alan3 from 'images/alan3.png'
+import alan4 from 'images/alan4.png'
+import alan5 from 'images/alan5.png'
+
+
 ## Gelişmiş
 
 Gelişmiş alan, daha kompleks bir yapıdır. 
 
 Diğer tüm seçeneklerde, hedef videodan alınan görüntüler tepe noktadan başlar ve en alta iner. Yalnızca sağ ve sol alanlara göre oranlar oluşturulur.
 
-Örneğin %38 değerinde, videonun sağında ve solundaki %31'lik alanlar yok sayılır ve kaydedilen mp4 dosyasında görülmez.
+Örneğin %38 değerinde, videonun sağında ve solundaki %31'lik alanlar yok sayılır ve kaydedilen mp4 dosyasında görünmez.
 
 Gelişmiş seçenek ise hedef videonun tamamına müdahale etmemizi sağlar.
 
@@ -16,6 +24,8 @@ Dilediğimiz herhangi bir noktayı, çerçeveyi kaydedebiliriz.
 ### Gelişmiş Alan Tipi: Yüzde
 
 Hedef videodan yakalamak istediğimiz bölümü yüzdesel ifadelerle seçtiğimiz yerdir.
+
+<Image src={alan} />
 
 En büyük faydası, çözünürlük hesaplama ihtiyacını ortadan kaldırmasıdır.
 
@@ -32,7 +42,9 @@ Buradaki sıralama : **Üst**, **Alt**, **Sol**, **Sağ** şeklindedir.
 Seçmek istediğimiz alana göre üstten, alttan, soldan ve sağdan yüzdesel oranlarımızı yazarız ve geriye kalan bölüm kaydedeceğimiz kısım olur.
 
 
--- görsel --
+Örnek : 5,55,60,6
+
+<Image src={alan2} width={800} height={800} />
 
 
 ### Gelişmiş Alan Tipi: Piksel
@@ -41,9 +53,66 @@ Hedef videodan seçilmek istenen alanın pikseller ile seçilmesini sağlar.
 
 İşaretlendiğinde, **Gelişmiş Alan - Piksel** seçeneği ekranda belirir.
 
-Burada Genişlik, Yükseklik, X ve Y değerleri sırasıyla girilmelidir.
+Burada **Genişlik**, **Yükseklik**, **X** ve **Y koordinatları** <u>***sırasıyla***</u> girilmelidir.
 
 Girilen genişlik ve yükseklik değerleri, hedef videoda seçilmek istenen alanın genişliğini ve yüksekliğini belirtir. X ve Y değeri ise bu alanın yer aldığı koordinatlardır.
 
 
--- görsel --
+#### Örnek
+
+Yukarıda yer alan görsel üzerinden Piksel özelliğini açıklamak için **Paint**'ten faydalanabiliriz. :
+
+Kırmızı çerçevenin çözünürlük değerlerini(video çözünürlüğü) bulmak için Paint'in "Seç" özelliğini kullanarak ilgili alanı 
+seçtiğimizde bu alanın çözünürlüğüne ulaşabiliyoruz.
+
+
+Özel bir alanını seçmek istediğimiz videomuzun çözünürlüğü **737x385**.
+
+
+<Image src={alan3}  />
+
+
+
+
+Video içerisinde seçmek istediğimiz mavi alanın çözünürlüğü ise **223x192** şeklinde.
+
+
+<Image src={alan4}  />
+
+
+Yani, **737x385** çözünürlüğe sahip bir görüntü içerisinde **ilgili alanı seçebilmemiz için** çözünürlük ayarımız **223x192** olmalı.
+
+
+Çözünürlük ayarımızı belirledikten sonra, bu çözünürlüğün **X** ve **Y koordinatlarını** tespit etmemiz gerekir.
+
+Bu durumda, konumu tespit edebilmemiz için mouse ile seçmek istediğimiz alanın başlangıç noktasına gitmeliyiz.
+
+
+<Image src={alan5}  />
+
+
+
+Kırmızı nokta ile belirtilen yere mouse götürüldüğünde, ilgili konumun X ve Y değerlerinin **499**,**52** olduğunu sol alttan görebiliriz.
+
+İlk değer X, ikinci değer ise Y koordinatını ifade etmektedir. 
+
+
+Bu durumda;
+
+`X koordinatımız` : **499**
+
+`Y koordinatımız` : **52** 
+
+olur.
+
+Son durumda hem çözünürlük hem X ve Y koordinatlarına sahip olduğumuz için bu değerleri sisteme girebiliriz.
+
+
+Sistemimize tanımlamamız gereken değerler sırasıyla şu şekilde olacaktır :
+
+
+**223,192,499,52**
+
+
+Hedef içeriğin çözünürlük oranı 737x385 olduğu durumda, yukarıdaki veriler sisteme tanımlandığı takdirde ilgili alan seçilecek ve üretilen videoda yalnızca bu alanın görüntüsü karşımıza çıkacaktır.
+
